@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+*.txt
+*.venv
+tes*.py
+lis*.py
+dash*
+config
+logs
+utils

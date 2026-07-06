@@ -3,9 +3,9 @@ __pycache__/
 .env
 *.txt
 *.venv
-tes*.py
 lis*.py
 dash*
 config
 logs
 utils
+test.py

@@ -1,5 +1,11 @@
 # 🚀 Dados de vendas com AI — Chat Inteligente com Banco de Dados usando IA Generativa
 
+<<<<<<< HEAD
+=======
+🌐 Aplicação em produção: https://iavendas.streamlit.app/  
+📦 Repositório: https://github.com/cristianpaes/IA_VENDAS  
+
+>>>>>>> a62e288951ceae20e951aafcd96eb2113b733167
 <p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
@@ -199,7 +205,10 @@ streamlit run app.py
 
 ---
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a62e288951ceae20e951aafcd96eb2113b733167
 ---
 
 # 📚 Conhecimentos Aplicados

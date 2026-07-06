@@ -21,7 +21,7 @@ if "messages" not in st.session_state:
 # =========================
 # HEADER
 # =========================
-st.title("💬 DataMind AI - Chat de Dados + Gráficos")
+st.title("💬 Dados de vendas com AI - Chat de Dados + Gráficos")
 
 # =========================
 # INPUT

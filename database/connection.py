@@ -1,50 +1,60 @@
-import os
 from sqlalchemy import create_engine
-
-# ---------------------------------------------------
-# Detecta automaticamente Streamlit Cloud ou Local
-# ---------------------------------------------------
-
-try:
-    import streamlit as st
-
-    if hasattr(st, "secrets") and "DB_HOST" in st.secrets:
-
-        DB_HOST = st.secrets["DB_HOST"]
-        DB_NAME = st.secrets["DB_NAME"]
-        DB_USER = st.secrets["DB_USER"]
-        DB_PASSWORD = st.secrets["DB_PASSWORD"]
-        DB_PORT = st.secrets["DB_PORT"]
-        DB_SSLMODE = st.secrets["DB_SSLMODE"]
-
-    else:
-        raise Exception()
-
-except:
-
-    from dotenv import load_dotenv
-
-    load_dotenv()
-
-    DB_HOST = os.getenv("DB_HOST")
-    DB_NAME = os.getenv("DB_NAME")
-    DB_USER = os.getenv("DB_USER")
-    DB_PASSWORD = os.getenv("DB_PASSWORD")
-    DB_PORT = os.getenv("DB_PORT")
-    DB_SSLMODE = os.getenv("DB_SSLMODE", "require")
+import os
 
 
-DATABASE_URL = (
-    f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}"
-    f"@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-    f"?sslmode={DB_SSLMODE}"
-)
+class DatabaseConnection:
+    def __init__(self):
 
-engine = create_engine(
-    DATABASE_URL,
-    pool_pre_ping=True,
-    pool_recycle=300,
-)
+        # ---------------------------------------------
+        # STREAMLIT CLOUD
+        # ---------------------------------------------
+        try:
+            import streamlit as st
 
-def get_engine():
-    return engine
+            if "DB_HOST" in st.secrets:
+
+                host = st.secrets["DB_HOST"]
+                database = st.secrets["DB_NAME"]
+                user = st.secrets["DB_USER"]
+                password = st.secrets["DB_PASSWORD"]
+                port = st.secrets["DB_PORT"]
+                sslmode = st.secrets.get("DB_SSLMODE", "require")
+
+            else:
+                raise Exception
+
+        # ---------------------------------------------
+        # LOCAL (.env)
+        # ---------------------------------------------
+        except Exception:
+
+            from dotenv import load_dotenv
+
+            load_dotenv()
+
+            host = os.getenv("DB_HOST")
+            database = os.getenv("DB_NAME")
+            user = os.getenv("DB_USER")
+            password = os.getenv("DB_PASSWORD")
+            port = os.getenv("DB_PORT")
+            sslmode = os.getenv("DB_SSLMODE", "require")
+
+        # ---------------------------------------------
+        # STRING DE CONEXÃO
+        # ---------------------------------------------
+        connection_string = (
+            f"postgresql+psycopg2://{user}:{password}"
+            f"@{host}:{port}/{database}"
+            f"?sslmode={sslmode}"
+        )
+
+        self.engine = create_engine(
+            connection_string,
+            pool_pre_ping=True,
+            pool_recycle=300,
+            pool_size=5,
+            max_overflow=10,
+        )
+
+    def get_engine(self):
+        return self.engine

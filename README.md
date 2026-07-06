@@ -1,4 +1,4 @@
-# 🚀 DataMind AI — Chat Inteligente com Banco de Dados usando IA Generativa
+# 🚀 Dados de vendas com AI — Chat Inteligente com Banco de Dados usando IA Generativa
 
 <p align="center">
 

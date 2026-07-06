@@ -1,92 +1,3 @@
-Skip to content
-cristianpaes
-IA_VENDAS
-Repository navigation
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security and quality
-Insights
-Settings
-Files
-Go to file
-t
-T
-.devcontainer
-ai
-database
-.gitignore
-README.md
-app.py
-requirements.txt
-test_engine.py
-test_logger.py
-test_processor.py
-test_selector.py
-teste_executor.py
-teste_gemini.py
-teste_schema.py
-IA_VENDAS
-/
-README.md
-in
-main
-
-Edit
-
-Preview
-Indent mode
-
-Spaces
-Indent size
-
-2
-Line wrap mode
-
-Soft wrap
-Editing README.md file contents
-  1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
- 10
- 11
- 12
- 13
- 14
- 15
- 16
- 17
- 18
- 19
- 20
- 21
- 22
- 23
- 24
- 25
- 26
- 27
- 28
- 29
- 30
- 31
- 32
- 33
- 34
- 35
- 36
- 37
- 38
- 39
 # 🚀 Dados de vendas com AI — Chat Inteligente com Banco de Dados usando IA Generativa
 
 <p align="center">
@@ -126,7 +37,208 @@ Muitas empresas possuem milhares de informações armazenadas em bancos de dados
 - Qual foi o faturamento do último trimestre?
 
 O DataMind AI elimina essa barreira utilizando Inteligência Artificial para gerar consultas SQL automaticamente.
-Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
-Nenhum arquivo escolhido
-Attach files by dragging & dropping, selecting or pasting them.
- 
+
+---
+
+# 🧠 Arquitetura
+
+```text
+Usuário
+     │
+     ▼
+Streamlit
+     │
+     ▼
+AI Engine
+     │
+     ├────────► Gemini AI
+     │
+     ▼
+SQL Generator
+     │
+     ▼
+SQL Validator
+     │
+     ▼
+PostgreSQL
+     │
+     ▼
+DataFrame
+     │
+     ├────────► Plotly
+     │
+     ▼
+Análise Inteligente
+```
+
+---
+
+# ⚙️ Tecnologias
+
+- Python
+- Google Gemini AI
+- PostgreSQL
+- SQLAlchemy
+- Pandas
+- Plotly
+- Streamlit
+- Python Dotenv
+
+---
+
+# 🧩 Principais Recursos
+
+✅ Perguntas em linguagem natural
+
+✅ Geração automática de SQL
+
+✅ Execução segura das consultas
+
+✅ Validação de SQL
+
+✅ Gráficos automáticos
+
+✅ Histórico das perguntas
+
+✅ Explicação dos resultados utilizando IA
+
+✅ Arquitetura modular
+
+---
+
+# 📊 Exemplo
+
+Pergunta:
+
+```text
+Qual vendedor vendeu mais em 2025?
+```
+
+SQL gerado automaticamente:
+
+```sql
+SELECT
+    vendedor,
+    SUM(valor_total) AS faturamento
+FROM fato_vendas
+GROUP BY vendedor
+ORDER BY faturamento DESC
+LIMIT 1;
+```
+
+Resultado:
+
+```
+Carlos Souza
+R$ 1.248.350,00
+```
+
+Gráfico:
+
+📈 Barra
+
+Resumo:
+
+> Carlos Souza foi o vendedor com maior faturamento em 2025.
+
+---
+
+# 📁 Estrutura do Projeto
+
+```
+IA_STREAMLIT/
+
+│
+├── ai/
+│   ├── engine.py
+│   ├── client.py
+│   ├── sql_generator.py
+│   ├── sql_validator.py
+│   ├── result_analyzer.py
+│   ├── chart_generator.py
+│
+├── database/
+│   ├── connection.py
+│   ├── executor.py
+│   ├── schema.py
+│
+├── app.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# 🚀 Como executar
+
+Clone o projeto
+
+```bash
+git clone https://github.com/SEU_USUARIO/DataMind-AI.git
+```
+
+Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+Configure o arquivo `.env`
+
+```env
+DATABASE_URL=
+
+GEMINI_API_KEY=
+```
+
+Execute
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# 📌 Próximas Evoluções
+
+- Cache Inteligente
+- Memória Conversacional
+- Multi Banco de Dados
+- Dashboards Automáticos
+- Exportação para Excel
+- Exportação PDF
+- Agente SQL Inteligente
+- Segurança Avançada
+- Deploy em Cloud
+
+---
+
+# 📚 Conhecimentos Aplicados
+
+- Engenharia de Dados
+- Inteligência Artificial Generativa
+- Prompt Engineering
+- SQL Avançado
+- PostgreSQL
+- Desenvolvimento Backend
+- Arquitetura de Software
+- ETL
+- Business Intelligence
+- Data Visualization
+
+---
+
+# 👨‍💻 Sobre o Projeto
+
+Este projeto foi desenvolvido como estudo avançado em Engenharia de Dados, Inteligência Artificial Generativa e Business Intelligence, simulando um assistente corporativo capaz de consultar bancos de dados através de linguagem natural.
+
+Além do aspecto técnico, o objetivo foi explorar boas práticas de arquitetura, modularização, integração com modelos de IA e experiência do usuário.
+
+---
+
+# 📬 Contato
+
+Caso tenha interesse em conversar sobre o projeto ou oportunidades na área de Dados, BI, IA ou Desenvolvimento Backend, fique à vontade para entrar em contato.
+
+LinkedIn:
+https://www.linkedin.com/in/cristian-camargo/

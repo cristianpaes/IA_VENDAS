@@ -6,7 +6,7 @@ import plotly.express as px
 # CONFIG
 # =========================
 st.set_page_config(
-    page_title="DataMind AI Chat",
+    page_title="Dados de vendas AI Chat",
     layout="wide"
 )
 

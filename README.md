@@ -21,7 +21,7 @@
 
 # 💡 Visão Geral
 
-O **DataMind AI** é uma aplicação desenvolvida para transformar perguntas em linguagem natural em consultas SQL inteligentes, executando consultas diretamente em um banco PostgreSQL e retornando:
+O **Dados de vendas** é uma aplicação desenvolvida para transformar perguntas em linguagem natural em consultas SQL inteligentes, executando consultas diretamente em um banco PostgreSQL e retornando:
 
 - SQL gerado automaticamente
 - Dados encontrados

@@ -6,7 +6,7 @@ import plotly.express as px
 # CONFIG
 # =========================
 st.set_page_config(
-    page_title="Dados de vendas AI Chat",
+    page_title="Dados de vendas IA Chat",
     layout="wide"
 )
 
@@ -21,7 +21,7 @@ if "messages" not in st.session_state:
 # =========================
 # HEADER
 # =========================
-st.title("💬 Dados de vendas com AI - Chat de Dados + Gráficos")
+st.title("💬 Dados de vendas com IA - Chat de Dados + Gráficos")
 
 # =========================
 # INPUT

@@ -1,11 +1,10 @@
-# 🚀 Dados de vendas com AI — Chat Inteligente com Banco de Dados usando IA Generativa
+# 🚀 Dados de vendas com IA — Chat Inteligente com Banco de Dados usando IA Generativa
 
-<<<<<<< HEAD
-=======
+
 🌐 Aplicação em produção: https://iavendas.streamlit.app/  
 📦 Repositório: https://github.com/cristianpaes/IA_VENDAS  
 
->>>>>>> a62e288951ceae20e951aafcd96eb2113b733167
+
 <p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
@@ -42,7 +41,7 @@ Muitas empresas possuem milhares de informações armazenadas em bancos de dados
 - Qual cliente mais compra?
 - Qual foi o faturamento do último trimestre?
 
-O DataMind AI elimina essa barreira utilizando Inteligência Artificial para gerar consultas SQL automaticamente.
+O  **Dados de vendas** elimina essa barreira utilizando Inteligência Artificial para gerar consultas SQL automaticamente.
 
 ---
 
@@ -180,7 +179,7 @@ IA_STREAMLIT/
 Clone o projeto
 
 ```bash
-git clone https://github.com/SEU_USUARIO/DataMind-AI.git
+git clone https://github.com/cristianpaes/IA_VENDAS
 ```
 
 Instale as dependências
@@ -205,10 +204,6 @@ streamlit run app.py
 
 ---
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a62e288951ceae20e951aafcd96eb2113b733167
 ---
 
 # 📚 Conhecimentos Aplicados
